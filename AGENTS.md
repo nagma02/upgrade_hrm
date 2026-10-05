@@ -1,0 +1,23 @@
+# AI Development Rules
+
+- Read the relevant docs before editing code.
+- Understand the existing architecture before adding new files.
+- Search existing components before creating new components.
+- Search existing hooks before creating new hooks.
+- Search existing utilities before creating new utilities.
+- Search existing services before creating new services.
+- Search existing schemas before creating new schemas.
+- Reuse existing functionality wherever reasonable.
+- Avoid duplicate functionality.
+- Do not modify unrelated files.
+- Follow existing naming conventions.
+- Follow strict TypeScript rules.
+- Follow accessibility standards.
+- Follow security standards.
+- Run lint after changes.
+- Run typecheck after changes.
+- Run tests after changes.
+- Run build after changes.
+- Update documentation when architecture changes.
+- Never bypass validation or security controls.
+- Never introduce dependencies without justification.
