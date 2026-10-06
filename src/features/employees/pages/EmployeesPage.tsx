@@ -46,7 +46,7 @@ export default function EmployeesPage() {
         title="Employees"
         subtitle="Manage your organization's employees and workforce information."
         actions={
-          <div style={{ display: 'flex', gap: 8 }}>
+          <div className="employee-page-actions" style={{ display: 'flex', gap: 8 }}>
             <button
               className="button"
               onClick={() => {
@@ -80,7 +80,7 @@ export default function EmployeesPage() {
         }
       />
 
-      <div style={{ display: 'grid', gap: 12 }}>
+      <div className="employee-content-stack" style={{ display: 'grid', gap: 12 }}>
         <div className="employee-toolbar">
           <input
             placeholder="Search employees, id, email..."
@@ -186,7 +186,7 @@ export default function EmployeesPage() {
         </section>
 
         <div className="card">
-          <div style={{ overflowX: 'auto' }}>
+          <div className="employee-table-scroll" style={{ overflowX: 'auto' }}>
             <table className="table" style={{ minWidth: 900 }}>
               <thead>
                 <tr>
@@ -278,11 +278,11 @@ export default function EmployeesPage() {
           </div>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="employee-pagination" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ color: 'var(--color-muted)' }}>
             Showing {pageItems.length} of {filtered.length} employees
           </div>
-          <div style={{ display: 'flex', gap: 8 }}>
+          <div className="employee-pagination-controls" style={{ display: 'flex', gap: 8 }}>
             <button className="button" onClick={() => setPage((p) => Math.max(1, p - 1))}>
               Prev
             </button>

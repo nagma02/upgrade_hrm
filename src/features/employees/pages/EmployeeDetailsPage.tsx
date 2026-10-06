@@ -28,7 +28,7 @@ export default function EmployeeDetailsPage() {
     <PageContainer>
       <PageHeader title="Employee Details" subtitle={`${mock.name} — ${mock.title}`} actions={<div style={{ display: 'flex', gap: 8 }}><button className="button" onClick={() => navigateTo(`/app/employees/${mock.id}/edit`)}>Edit</button><button className="button" onClick={() => {if(window.confirm(`Delete ${mock.name}?`)){localStorage.setItem('hrm-employees',JSON.stringify(employeeList.filter((e:{id:string})=>e.id!==mock.id)));toast.success('Employee deleted successfully');navigateTo('/app/employees')}}}>Delete</button></div>} />
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: 16 }}>
+      <div className="employee-details-grid" style={{ display: 'grid', gap: 16 }}>
         <div style={{ display: 'grid', gap: 12 }}>
           <div className="card">
             <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
@@ -44,10 +44,10 @@ export default function EmployeeDetailsPage() {
           <div className="card">
             <h3 className="section-title">Overview</h3>
             <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Email</div><div>{mock.email}</div></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Phone</div><div>{mock.phone}</div></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Manager</div><div>{mock.manager}</div></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Join Date</div><div>{mock.joinDate}</div></div>
+              <div className="employee-detail-row" style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Email</div><div>{mock.email}</div></div>
+              <div className="employee-detail-row" style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Phone</div><div>{mock.phone}</div></div>
+              <div className="employee-detail-row" style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Manager</div><div>{mock.manager}</div></div>
+              <div className="employee-detail-row" style={{ display: 'flex', justifyContent: 'space-between' }}><div style={{ color: 'var(--color-muted)' }}>Join Date</div><div>{mock.joinDate}</div></div>
             </div>
           </div>
 
