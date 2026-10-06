@@ -12,7 +12,7 @@ export default function RecentEmployeesTable() {
         <div style={{ color: 'var(--color-muted)' }}>Latest hires</div>
       </div>
 
-      <div style={{ marginTop: 12, overflowX: 'auto' }}>
+      <div className="dashboard-table-scroll" style={{ marginTop: 12, overflowX: 'auto' }}>
         <table className="table" style={{ width: '100%', minWidth: 720 }}>
           <thead>
             <tr>
